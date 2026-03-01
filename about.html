@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Alexandre Garel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: start;
+}
+.bio-text {
+  font-size: 15.5px; line-height: 1.85;
+  color: rgba(221,229,240,.82);
+  text-align: justify;
+}
+.bio-text p + p { margin-top: 22px; }
+
+.affil-list {
+  display: flex; flex-direction: column; gap: 14px;
+  margin-top: 36px;
+}
+.affil-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 14px 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-bdr);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: border-color .2s, background .2s;
+}
+.affil-item:hover { border-color: rgba(0,229,204,.3); background: rgba(0,229,204,.04); }
+.affil-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--teal); flex-shrink: 0; margin-top: 5px;
+}
+.affil-dot.gold { background: var(--gold); }
+.affil-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; font-weight: 600; color: var(--white);
+}
+.affil-role {
+  font-size: 11.5px; color: var(--muted); margin-top: 2px;
+}
+
+/* Photo sidebar */
+.photo-sidebar { position: sticky; top: 80px; }
+.photo-frame {
+  position: relative;
+  border: 1px solid rgba(0,229,204,.2);
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: #0a1520;
+}
+.photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  display: block;
+}
+.photo-frame::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(7,11,18,.7) 100%);
+  pointer-events: none;
+}
+.photo-caption {
+  padding: 16px 0 0;
+}
+.photo-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px; font-weight: 700; color: var(--white);
+}
+.photo-role { font-size: 12px; color: var(--teal); margin-top: 4px; letter-spacing: .5px; }
+
+.social-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+.soc-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border-radius: 4px;
+  border: 1px solid rgba(0,229,204,.25);
+  color: var(--teal); font-size: 11.5px; text-decoration: none;
+  transition: background .2s, border-color .2s;
+}
+.soc-btn:hover { background: rgba(0,229,204,.1); border-color: var(--teal); }
+
+.topics-section { margin-top: 40px; }
+.topics-title {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 12px;
+}
+.topics-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .photo-sidebar { position: static; }
+  .photo-frame { aspect-ratio: 4/3; max-height: 320px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html">Alexandre <span>Garel</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Main</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="working-papers.html">Working Papers</a></li>
+    <li><a href="press-coverage.html">Press</a></li>
+    <li><a href="data.html">Data</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#" class="nav-btn">CV</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Profile</div>
+    <h1 class="sec-title">About</h1>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="about-grid">
+    <!-- Left: bio + affiliations -->
+    <div>
+      <div class="bio-text">
+        <p>Welcome to my personal website. I am currently a Full Professor in Finance at Audencia Business School and Affiliated Researcher at the HKU Sustainability Research Institute. My research focuses on corporate finance, behavioral finance, climate finance, and biodiversity finance. I am particularly interested in the voting behavior of ESG funds, the ESG engagement of institutional investors, biodiversity dependence and transition risks, and the lack of market discipline on climate commitments.</p>
+        <p>I served as scientific advisor for several finance-related projects in the industry. I currently serve on the scientific committee of a consortium of French institutions initiating two large biodiversity funds. I am also a qualified expert for the FIR (French Forum for Sustainable and Responsible Investment).</p>
+      </div>
+
+      <div class="topics-section">
+        <div class="topics-title">Research Topics</div>
+        <div class="topics-cloud">
+          <span class="chip">Climate Finance</span>
+          <span class="chip">Biodiversity Finance</span>
+          <span class="chip">ESG</span>
+          <span class="chip">Behavioral Finance</span>
+          <span class="chip">Corporate Governance</span>
+          <span class="chip">Institutional Investors</span>
+          <span class="chip">AI</span>
+          <span class="chip">ML</span>
+          <span class="chip">Asset Pricing</span>
+        </div>
+      </div>
+
+      <div class="affil-list" style="margin-top:40px;">
+        <a href="https://www.audencia.com/faculte-recherche/corps-professoral/cv-garel" target="_blank" class="affil-item">
+          <div class="affil-dot"></div>
+          <div>
+            <div class="affil-name">Audencia Business School</div>
+            <div class="affil-role">Full Professor in Finance — Primary Affiliation</div>
+          </div>
+        </a>
+        <a href="https://hkujcesgri.hku.hk/" target="_blank" class="affil-item">
+          <div class="affil-dot"></div>
+          <div>
+            <div class="affil-name">HKU Sustainability Research Institute</div>
+            <div class="affil-role">Affiliated Researcher</div>
+          </div>
+        </a>
+        <a href="https://www.frenchsif.org/isr_esg/en/french-sif/" target="_blank" class="affil-item">
+          <div class="affil-dot gold"></div>
+          <div>
+            <div class="affil-name">FIR — French Forum for Sustainable and Responsible Investment</div>
+            <div class="affil-role">Qualified Expert</div>
+          </div>
+        </a>
+        <a href="https://impact-investor.com/french-institutional-investors-pick-mirova-to-manage-e100m-biodiversity-fund/" target="_blank" class="affil-item">
+          <div class="affil-dot gold"></div>
+          <div>
+            <div class="affil-name">Consortium of French Institutions</div>
+            <div class="affil-role">Scientific Committee — Biodiversity Funds</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: photo + links -->
+    <div class="photo-sidebar">
+      <div class="photo-frame">
+        <img src="photo.png" alt="Alexandre Garel" onerror="this.style.display='none'">
+      </div>
+      <div class="photo-caption">
+        <div class="photo-name">Alexandre Garel</div>
+        <div class="photo-role">Full Professor · Finance, Audencia Business School</div>
+      </div>
+      <div class="social-row">
+        <a href="https://scholar.google.com/citations?user=YdbSEhwAAAAJ&hl=en" target="_blank" class="soc-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Google Scholar
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="soc-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2396853" target="_blank" class="soc-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+          SSRN
+        </a>
+        <a href="mailto:agarel@audencia.com" class="soc-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+

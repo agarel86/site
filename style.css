@@ -1,0 +1,157 @@
+/* ══════════════════════════════════════════════════
+   Alexandre Garel — Shared Stylesheet
+   Dark Observatory aesthetic
+══════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #070b12;
+  --teal:     #00e5cc;
+  --teal-dim: rgba(0,229,204,0.08);
+  --teal-mid: rgba(0,229,204,0.18);
+  --gold:     #e8b84b;
+  --white:    #dde5f0;
+  --muted:    #4a5c72;
+  --muted2:   #1e2c3a;
+  --card-bg:  rgba(255,255,255,0.032);
+  --card-bdr: rgba(0,229,204,0.13);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+/* ── star field ── */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at  7% 11%, rgba(255,255,255,.5)  0%,transparent 100%),
+    radial-gradient(1px 1px at 21% 72%, rgba(255,255,255,.3)  0%,transparent 100%),
+    radial-gradient(1px 1px at 35%  6%, rgba(255,255,255,.4)  0%,transparent 100%),
+    radial-gradient(1px 1px at 52% 88%, rgba(255,255,255,.28) 0%,transparent 100%),
+    radial-gradient(1px 1px at 65% 32%, rgba(255,255,255,.45) 0%,transparent 100%),
+    radial-gradient(1px 1px at 78% 58%, rgba(255,255,255,.32) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 16%, rgba(255,255,255,.55) 0%,transparent 100%),
+    radial-gradient(1px 1px at 94% 80%, rgba(255,255,255,.38) 0%,transparent 100%),
+    radial-gradient(1px 1px at 13% 93%, rgba(255,255,255,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 46% 46%, rgba(255,255,255,.22) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 29% 38%, rgba(0,229,204,.4) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 71% 14%, rgba(0,229,204,.3) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 87% 92%, rgba(0,229,204,.25) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 58% 68%, rgba(0,229,204,.2) 0%,transparent 100%);
+}
+
+/* ══════════════════════════════════
+   NAV
+══════════════════════════════════ */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 52px; padding: 0 48px;
+  border-bottom: 1px solid rgba(0,229,204,.07);
+  background: rgba(7,11,18,.88);
+  backdrop-filter: blur(12px);
+}
+
+.nav-logo a, .nav-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px; font-weight: 700; letter-spacing: .3px;
+  color: var(--white); text-decoration: none;
+}
+.nav-logo a span, .nav-logo span { color: var(--teal); }
+
+.nav-links { display: flex; gap: 24px; list-style: none; }
+.nav-links a {
+  font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color .2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--teal); }
+
+.nav-right { display: flex; gap: 12px; align-items: center; }
+
+.nav-home {
+  font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color .2s;
+  display: flex; align-items: center; gap: 5px;
+}
+.nav-home:hover { color: var(--white); }
+
+.nav-btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 7px 18px; border-radius: 3px; text-decoration: none;
+  border: 1px solid var(--teal); color: var(--teal); background: transparent;
+  transition: background .2s;
+}
+.nav-btn:hover { background: var(--teal-mid); }
+
+/* ══════════════════════════════════
+   PAGE WRAPPER
+══════════════════════════════════ */
+.page-wrap {
+  position: relative; z-index: 1;
+  max-width: 1080px; margin: 0 auto;
+  padding: 56px 48px 100px;
+}
+
+/* ── Section header ── */
+.sec-header { margin-bottom: 48px; }
+.sec-eyebrow {
+  font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 10px;
+}
+.sec-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(30px, 4vw, 52px); font-weight: 700;
+  color: var(--white); line-height: 1.1;
+  margin-bottom: 14px;
+}
+.sec-rule {
+  width: 48px; height: 2px;
+  background: linear-gradient(90deg, var(--teal), transparent);
+}
+
+/* ── Tag chips ── */
+.chip {
+  display: inline-block;
+  font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 2px;
+  border: 1px solid rgba(0,229,204,.3);
+  color: var(--teal); background: rgba(0,229,204,.05);
+}
+.chip-gold {
+  border-color: rgba(232,184,75,.35);
+  color: var(--gold); background: rgba(232,184,75,.06);
+}
+
+/* ── Glass card ── */
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-bdr);
+  border-radius: 6px;
+  padding: 28px 32px;
+  transition: border-color .25s, background .25s;
+}
+.glass-card:hover {
+  border-color: rgba(0,229,204,.25);
+  background: rgba(255,255,255,.05);
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .page-wrap { padding: 36px 20px 80px; }
+}

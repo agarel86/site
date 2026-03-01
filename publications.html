@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — Alexandre Garel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.filter-bar {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px;
+}
+.filter-btn {
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 3px; cursor: pointer;
+  border: 1px solid rgba(0,229,204,.2);
+  color: var(--muted); background: transparent;
+  transition: all .2s; font-family: 'Inter', sans-serif;
+}
+.filter-btn:hover, .filter-btn.on {
+  border-color: var(--teal); color: var(--teal);
+  background: rgba(0,229,204,.07);
+}
+
+.pub-list { display: flex; flex-direction: column; gap: 14px; }
+
+.pub-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-bdr);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.pub-card:hover { border-color: rgba(0,229,204,.28); }
+
+.pub-header {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 20px 24px; cursor: pointer;
+}
+.pub-year {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; font-weight: 700; color: var(--teal);
+  flex-shrink: 0; min-width: 38px; padding-top: 2px;
+}
+.pub-body { flex: 1; }
+.pub-journal {
+  font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 5px; opacity: .8;
+}
+.pub-citation {
+  font-size: 14px; line-height: 1.55; color: var(--white);
+  font-family: 'Inter', sans-serif;
+}
+.pub-meta {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  margin-top: 10px;
+}
+.pub-status {
+  font-size: 9.5px; letter-spacing: .8px; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 2px;
+  background: rgba(232,184,75,.12); border: 1px solid rgba(232,184,75,.3);
+  color: var(--gold);
+}
+.pub-topics { display: flex; gap: 5px; flex-wrap: wrap; }
+.pub-toggle {
+  flex-shrink: 0; font-size: 18px; color: var(--teal);
+  transition: transform .25s; align-self: flex-start; padding-top: 2px;
+  opacity: .6;
+}
+.pub-card.open .pub-toggle { transform: rotate(45deg); opacity: 1; }
+
+.pub-abstract {
+  max-height: 0; overflow: hidden;
+  transition: max-height .35s ease, padding .25s;
+  padding: 0 24px;
+  border-top: 0px solid rgba(0,229,204,.07);
+}
+.pub-card.open .pub-abstract {
+  max-height: 300px;
+  padding: 16px 24px 20px;
+  border-top-width: 1px;
+}
+.abstract-text {
+  font-size: 13.5px; line-height: 1.75;
+  color: rgba(221,229,240,.72);
+}
+.pub-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-top: 12px; font-size: 11.5px;
+  color: var(--teal); text-decoration: none; opacity: .8;
+}
+.pub-link:hover { opacity: 1; text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html">Alexandre <span>Garel</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Main</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="publications.html" class="active">Publications</a></li>
+    <li><a href="working-papers.html">Working Papers</a></li>
+    <li><a href="press-coverage.html">Press</a></li>
+    <li><a href="data.html">Data</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#" class="nav-btn">CV</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Peer-Reviewed Research</div>
+    <h1 class="sec-title">Publications</h1>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn on" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="climate">Climate</button>
+    <button class="filter-btn" data-filter="biodiversity">Biodiversity</button>
+    <button class="filter-btn" data-filter="esg">ESG</button>
+    <button class="filter-btn" data-filter="behavioral">Behavioral</button>
+    <button class="filter-btn" data-filter="governance">Governance</button>
+    <button class="filter-btn" data-filter="banking">Banking</button>
+  </div>
+
+  <div class="pub-list">
+
+    <div class="pub-card" data-topics="biodiversity,climate,esg">
+      <div class="pub-header">
+        <div class="pub-year">2026</div>
+        <div class="pub-body">
+          <div class="pub-journal">Review of Finance · 30(1) · pp. 231–272</div>
+          <div class="pub-citation">Garel, A., Romec, A., Sautner, Z., &amp; Wagner, A. F. Firm-Level Nature Dependence.</div>
+          <div class="pub-meta">
+            <div class="pub-topics">
+              <span class="chip">Biodiversity</span><span class="chip">Nature Risk</span><span class="chip">ESG</span>
+            </div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">We construct firm-level measures of dependence on ecosystem services (NatureDep scores) for 31,772 listed firms in 117 countries between 2010 and 2023. NatureDep scores positively correlate with impact on biodiversity, are unrelated to nature-related actions disclosed in the CDP survey, are not reflected in firms' corporate disclosures, and predict BlackRock's biodiversity-related engagements. The scores relate positively to measures of downside risk, and predict nature-related incidents.</div>
+        <a href="https://ssrn.com/abstract=5196826" target="_blank" class="pub-link">↗ SSRN</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="climate,esg,behavioral">
+      <div class="pub-header">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <div class="pub-journal">Management Science</div>
+          <div class="pub-citation">Di Giuli, A., Garel, A., Michaely, R., &amp; Romec, A. Climate Change and Mutual Fund Voting on Climate Proposals.</div>
+          <div class="pub-meta">
+            <div class="pub-topics">
+              <span class="chip">Climate</span><span class="chip">Mutual Funds</span><span class="chip">Voting</span>
+            </div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Fund managers exposed to abnormally hot temperatures are significantly more likely to support climate proposals. The effect is persistent and varies by firm-level climate risk, proposal quality, fund investment strategy, and prior awareness of climate change.</div>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3997730" target="_blank" class="pub-link">↗ SSRN</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="banking,governance">
+      <div class="pub-header">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <div class="pub-journal">Economics Letters · 254 · 112447</div>
+          <div class="pub-citation">Garel, A., Romec, A., &amp; Zhou, F. Shareholder engagements in banks.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Banking</span><span class="chip">Shareholder Engagement</span><span class="chip">Governance</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">We examine shareholder engagements in the banking sector, studying how institutional investors use their ownership stakes to influence bank policies and behavior through direct dialogue and private negotiations.</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0165176525001277" target="_blank" class="pub-link">↗ Economics Letters</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="biodiversity,esg,climate">
+      <div class="pub-header">
+        <div class="pub-year">2024</div>
+        <div class="pub-body">
+          <div class="pub-journal">Review of Finance · 28(4) · pp. 1151–1186</div>
+          <div class="pub-citation">Garel, A., Romec, A., Sautner, Z., &amp; Wagner, A. F. Do investors care about biodiversity?</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Biodiversity</span><span class="chip">Asset Pricing</span><span class="chip">ESG</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Introduces the corporate biodiversity footprint and studies whether it is priced in international stocks. A biodiversity footprint premium emerged after the Kunming Declaration (COP15), indicating that investors started pricing nature risk following regulatory signals.</div>
+        <a href="https://academic.oup.com/rof/article/28/4/1151/7645412" target="_blank" class="pub-link">↗ Review of Finance</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="esg,governance">
+      <div class="pub-header">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <div class="pub-journal">Financial Management · 54(2) · pp. 305–330</div>
+          <div class="pub-citation">Frijns, B., Garel, A., &amp; Liao, S. Employee demographic diversity and firm performance.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Diversity</span><span class="chip">ESG</span><span class="chip">Corporate Finance</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Using novel demographic data from employees' online profiles, we examine age, gender, and ethnicity diversity. We find no evidence of outperformance associated with greater employee diversity, in portfolio-sorting or cross-sectional regressions.</div>
+        <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/fima.12484" target="_blank" class="pub-link">↗ Financial Management</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="behavioral">
+      <div class="pub-header">
+        <div class="pub-year">2024</div>
+        <div class="pub-body">
+          <div class="pub-journal">Review of Accounting Studies · 29(1) · pp. 916–958</div>
+          <div class="pub-citation">Bourveau, T., Garel, A., Joos, P., &amp; Petit-Romec, A. When attention is away, analysts misplay: distraction and analyst forecast performance.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Behavioral Finance</span><span class="chip">Analysts</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Temporarily distracted analysts make less accurate forecasts, revise less frequently, and publish less informative revisions. Analyst distraction increases information asymmetry for covered stocks.</div>
+        <a href="https://link.springer.com/article/10.1007/s11142-022-09733-w" target="_blank" class="pub-link">↗ Review of Accounting Studies</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="governance">
+      <div class="pub-header">
+        <div class="pub-year">2024</div>
+        <div class="pub-body">
+          <div class="pub-journal">Journal of Financial and Quantitative Analysis · 59(3) · pp. 1100–1140</div>
+          <div class="pub-citation">Derrien, F., Garel, A., Romec, A., &amp; Weisskopf, J. P. Online reputation and debt capacity.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Corporate Finance</span><span class="chip">Online Reputation</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Using Parisian restaurants and regression discontinuity design, we show that favorable online ratings reduce cash flow risk and increase debt capacity. Customer ratings have economically significant effects on financial policy.</div>
+        <a href="https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/online-reputation-and-debt-capacity/B11465CF56C65158C87C4B9CE420BA72" target="_blank" class="pub-link">↗ JFQA</a>
+      </div>
+    </div>
+
+
+    <div class="pub-card" data-topics="behavioral">
+      <div class="pub-header">
+        <div class="pub-year">2022</div>
+        <div class="pub-body">
+          <div class="pub-journal">International Review of Financial Analysis · 84 · 102385</div>
+          <div class="pub-citation">Foley, S., Frijns, B., Garel, A., &amp; Roh, T. Y. Who buys Bitcoin? The cultural determinants of Bitcoin activity.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Behavioral Finance</span><span class="chip">Bitcoin</span><span class="chip">Culture</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">We examine cultural determinants of Bitcoin trading activity across countries. Countries with greater individualism, uncertainty avoidance, and long-term orientation show higher Bitcoin adoption and trading volumes, consistent with cultural factors driving cryptocurrency demand.</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S1057521922002071" target="_blank" class="pub-link">↗ IRFA</a>
+      </div>
+    </div>
+
+
+    <div class="pub-card" data-topics="behavioral">
+      <div class="pub-header">
+        <div class="pub-year">2022</div>
+        <div class="pub-body">
+          <div class="pub-journal">Journal of Financial Economics · 145(2) · pp. 234–254</div>
+          <div class="pub-citation">Edmans, A., Fernandez-Perez, A., Garel, A., &amp; Indriawan, I. Music sentiment and stock returns around the world.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Sentiment</span><span class="chip">Behavioral Finance</span><span class="chip">Asset Pricing</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Music positivity (songs chosen by individuals) is a real-time, language-free measure of national sentiment. Music sentiment positively correlates with same-week equity returns and negatively with next-week returns — consistent with sentiment-induced temporary mispricing.</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0304405X21003718" target="_blank" class="pub-link">↗ Journal of Financial Economics</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="banking,governance">
+      <div class="pub-header">
+        <div class="pub-year">2022</div>
+        <div class="pub-body">
+          <div class="pub-journal">Journal of Financial Intermediation · 50</div>
+          <div class="pub-citation">Garel, A., Petit-Romec, A., &amp; Vander Vennet, R. Institutional shareholders and bank capital.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Banking</span><span class="chip">Institutional Investors</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Banks with greater institutional ownership operate with substantially higher capital ratios, based on a large US bank sample and an S&P index inclusion instrumental variable strategy.</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S1042957322000134" target="_blank" class="pub-link">↗ Journal of Financial Intermediation</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="governance">
+      <div class="pub-header">
+        <div class="pub-year">2022</div>
+        <div class="pub-body">
+          <div class="pub-journal">Management Science · 68(12) · pp. 9107–9128</div>
+          <div class="pub-citation">Bourveau, T., Brochet, F., &amp; Garel, A. The capital market consequences of tenure-based voting rights: Evidence from the Florange Act.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Corporate Governance</span><span class="chip">Voting Rights</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">The 2014 Florange Act automatically granted double-voting rights to long-held shares. Firms adopting DVR by default experienced a decrease in long-term foreign institutional ownership and significantly underperformed on stock returns.</div>
+        <a href="https://pubsonline.informs.org/doi/full/10.1287/mnsc.2022.4320" target="_blank" class="pub-link">↗ Management Science</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="esg,climate">
+      <div class="pub-header">
+        <div class="pub-year">2021</div>
+        <div class="pub-body">
+          <div class="pub-journal">Journal of Corporate Finance · 68</div>
+          <div class="pub-citation">Garel, A., &amp; Petit-Romec, A. Investor rewards to environmental responsibility: Evidence from the COVID-19 crisis.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">ESG</span><span class="chip">Climate</span><span class="chip">COVID-19</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Firms with responsible strategies on environmental issues experienced better stock returns during the COVID-19 shock. The effect is mainly driven by initiatives addressing climate change.</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0929119921000699" target="_blank" class="pub-link">↗ Journal of Corporate Finance</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="governance,behavioral">
+      <div class="pub-header">
+        <div class="pub-year">2021</div>
+        <div class="pub-body">
+          <div class="pub-journal">Journal of Corporate Finance · 66</div>
+          <div class="pub-citation">Garel, A., Martin-Flores, J. M., Petit-Romec, A., &amp; Scott, A. Institutional investor distraction and earnings management.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Governance</span><span class="chip">Institutional Investors</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Firms with distracted institutional shareholders engage more in accrual-based and real earnings management. Managers exploit loosening monitoring intensity resulting from investor distraction.</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0929119920302455" target="_blank" class="pub-link">↗ Journal of Corporate Finance</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="esg,governance">
+      <div class="pub-header">
+        <div class="pub-year">2021</div>
+        <div class="pub-body">
+          <div class="pub-journal">Journal of Business Ethics · 174(1) · pp. 35–63</div>
+          <div class="pub-citation">Garel, A., &amp; Petit-Romec, A. Engaging employees for the long run: Long-term investors and employee-related CSR.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">CSR</span><span class="chip">Long-Term Investors</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Long-term investor ownership is a strong driver of employee-related CSR, consistent with the hypothesis that long-term investors foster employee incentives for long-term investment projects.</div>
+        <a href="https://link.springer.com/article/10.1007/s10551-020-04572-8" target="_blank" class="pub-link">↗ Journal of Business Ethics</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="banking">
+      <div class="pub-header">
+        <div class="pub-year">2020</div>
+        <div class="pub-body">
+          <div class="pub-journal">Journal of Banking &amp; Finance · 118</div>
+          <div class="pub-citation">Garel, A., Martín-Flores, J. M., &amp; Petit-Romec, A. Stock market listing and the persistence of bank performance across crises.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Banking</span><span class="chip">Financial Crises</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Bank performance during the 1998 crisis strongly predicts bank performance during the 2007–2008 crisis, for both publicly and privately held banks.</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0378426620301515" target="_blank" class="pub-link">↗ Journal of Banking &amp; Finance</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="governance">
+      <div class="pub-header">
+        <div class="pub-year">2019</div>
+        <div class="pub-body">
+          <div class="pub-journal">Journal of Corporate Finance · 58 · pp. 393–414</div>
+          <div class="pub-citation">Chen, J., Garel, A., &amp; Tourani-Rad, A. The value of academics: Evidence from academic independent director resignations in China.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Corporate Governance</span><span class="chip">Board of Directors</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Regulation 11 forced academic independent directors to resign from Chinese public companies. We document a negative market reaction to academic director resignations, implying positive value from academic board members.</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0929119918306369" target="_blank" class="pub-link">↗ Journal of Corporate Finance</a>
+      </div>
+    </div>
+
+    <div class="pub-card" data-topics="banking">
+      <div class="pub-header">
+        <div class="pub-year">2017</div>
+        <div class="pub-body">
+          <div class="pub-journal">Journal of Banking &amp; Finance · 75 · pp. 152–166</div>
+          <div class="pub-citation">Garel, A., &amp; Petit-Romec, A. Bank capital in the crisis: It's not just how much you have but who provides it.</div>
+          <div class="pub-meta">
+            <div class="pub-topics"><span class="chip">Banking</span><span class="chip">Capital Structure</span></div>
+          </div>
+        </div>
+        <div class="pub-toggle">+</div>
+      </div>
+      <div class="pub-abstract">
+        <div class="abstract-text">Banks with more short-term investor ownership have worse stock returns during the financial crisis, partially due to more risk prior to the crisis but mainly due to higher selling pressure during the crisis.</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0378426616302047" target="_blank" class="pub-link">↗ Journal of Banking &amp; Finance</a>
+      </div>
+    </div>
+
+  </div><!-- /pub-list -->
+</div><!-- /page-wrap -->
+
+<script>
+// Filter buttons
+const btns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.pub-card');
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    const f = btn.dataset.filter;
+    cards.forEach(c => {
+      if (f === 'all') { c.style.display = ''; return; }
+      const topics = (c.dataset.topics || '').split(',');
+      c.style.display = topics.includes(f) ? '' : 'none';
+    });
+  });
+});
+
+// Expand/collapse abstracts
+document.querySelectorAll('.pub-header').forEach(h => {
+  h.addEventListener('click', () => h.closest('.pub-card').classList.toggle('open'));
+});
+</script>
+</body>
+</html>
+

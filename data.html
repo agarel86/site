@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data — Alexandre Garel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.data-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-bdr);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  height: 100%;
+  transition: border-color .22s, transform .22s;
+}
+.data-card:hover {
+  border-color: rgba(0,229,204,.3);
+  transform: translateY(-3px);
+}
+
+.data-card-vis {
+  height: 130px; flex-shrink: 0; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #081520 0%, #0b1e2d 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.data-card-vis svg { width: 100%; height: 100%; }
+
+.data-card-body {
+  padding: 22px 24px 24px;
+  flex: 1; display: flex; flex-direction: column;
+}
+
+.data-badge {
+  font-size: 9.5px; letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 8px; flex-shrink: 0;
+}
+.data-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px; font-weight: 700; color: var(--white);
+  line-height: 1.25; margin-bottom: 12px; flex-shrink: 0;
+}
+.data-desc {
+  font-size: 13px; line-height: 1.75;
+  color: rgba(221,229,240,.65);
+  flex: 1;
+  text-align: justify;
+  margin-bottom: 0;
+}
+.data-source {
+  font-size: 11px; line-height: 1.55;
+  color: var(--muted);
+  margin-top: 16px; margin-bottom: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,229,204,.07);
+  font-style: italic;
+  flex-shrink: 0;
+}
+.data-download {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 18px; border-radius: 4px;
+  font-size: 12px; font-weight: 600; letter-spacing: .5px;
+  font-family: 'Space Grotesk', sans-serif;
+  border: 1px solid var(--teal); color: var(--teal); background: transparent;
+  text-decoration: none;
+  transition: background .2s;
+  align-self: flex-start;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+.data-download:hover { background: rgba(0,229,204,.1); }
+
+.intro-note {
+  font-size: 14px; line-height: 1.75;
+  color: rgba(221,229,240,.7);
+  margin-bottom: 40px; max-width: 720px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html">Alexandre <span>Garel</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Main</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="working-papers.html">Working Papers</a></li>
+    <li><a href="press-coverage.html">Press</a></li>
+    <li><a href="data.html" class="active">Data</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#" class="nav-btn">CV</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Open Access Datasets</div>
+    <h1 class="sec-title">Data</h1>
+    <div class="sec-rule"></div>
+  </div>
+
+
+  <div class="data-grid">
+
+    <!-- Dataset 1: Corporate Biodiversity Footprint -->
+    <div class="data-card">
+      <div class="data-card-vis">
+        <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <radialGradient id="dv1" cx="50%" cy="60%" r="45%">
+              <stop offset="0%" stop-color="#00e5cc" stop-opacity=".22"/>
+              <stop offset="100%" stop-color="#00e5cc" stop-opacity="0"/>
+            </radialGradient>
+            <style>
+              @keyframes fp-p{0%,100%{opacity:.4}50%{opacity:1}}
+              .fha{animation:fp-p 3.4s ease-in-out infinite 0s}
+              .fhb{animation:fp-p 3.4s ease-in-out infinite .38s}
+              .fhc{animation:fp-p 3.4s ease-in-out infinite .76s}
+              .fhd{animation:fp-p 3.4s ease-in-out infinite 1.14s}
+              .fhe{animation:fp-p 3.4s ease-in-out infinite 1.52s}
+              .fhf{animation:fp-p 3.4s ease-in-out infinite 1.9s}
+              .fhg{animation:fp-p 3.4s ease-in-out infinite 2.28s}
+              .fhh{animation:fp-p 3.4s ease-in-out infinite 2.66s}
+            </style>
+          </defs>
+
+          <!-- ambient glow behind cluster -->
+          <ellipse cx="150" cy="66" rx="72" ry="52" fill="url(#dv1)"/>
+
+          <!-- ── 5 TOES ── -->
+          <ellipse cx="125" cy="20" rx="9"   ry="10"  fill="#00e5cc" fill-opacity=".1" stroke="#00e5cc" stroke-width="1.6" stroke-opacity=".75"/>
+          <ellipse cx="138" cy="13" rx="8"   ry="9"   fill="#00e5cc" fill-opacity=".1" stroke="#00e5cc" stroke-width="1.5" stroke-opacity=".72"/>
+          <ellipse cx="151" cy="11" rx="7.5" ry="8.5" fill="#00e5cc" fill-opacity=".1" stroke="#00e5cc" stroke-width="1.4" stroke-opacity=".7"/>
+          <ellipse cx="164" cy="13" rx="7"   ry="8"   fill="#00e5cc" fill-opacity=".1" stroke="#00e5cc" stroke-width="1.3" stroke-opacity=".65"/>
+          <ellipse cx="175" cy="20" rx="6.5" ry="7.5" fill="#00e5cc" fill-opacity=".1" stroke="#00e5cc" stroke-width="1.2" stroke-opacity=".6"/>
+          <!-- toe core dots -->
+          <circle cx="125" cy="20" r="2.8" fill="#00e5cc" fill-opacity=".85"/>
+          <circle cx="138" cy="13" r="2.5" fill="#00e5cc" fill-opacity=".85"/>
+          <circle cx="151" cy="11" r="2.5" fill="#00e5cc" fill-opacity=".85"/>
+          <circle cx="164" cy="13" r="2.2" fill="#00e5cc" fill-opacity=".8"/>
+          <circle cx="175" cy="20" r="2"   fill="#00e5cc" fill-opacity=".75"/>
+
+          <!-- ── HEX CLUSTER — flat-top, r=11, footprint shape ──
+               Points for each hex at (cx,cy):
+               (cx+11,cy) (cx+5.5,cy-9.5) (cx-5.5,cy-9.5) (cx-11,cy) (cx-5.5,cy+9.5) (cx+5.5,cy+9.5) -->
+
+          <!-- Row 1 — ball of foot, y=42, 2 hexes -->
+          <polygon class="fha" points="150,42 144.5,32.5 133.5,32.5 128,42 133.5,51.5 144.5,51.5"
+                   fill="#00e5cc" fill-opacity=".14" stroke="#00e5cc" stroke-width="1.2" stroke-opacity=".72"/>
+          <circle cx="139" cy="42" r="2.4" fill="#00e5cc" fill-opacity=".9"/>
+
+          <polygon class="fhb" points="172,42 166.5,32.5 155.5,32.5 150,42 155.5,51.5 166.5,51.5"
+                   fill="#00e5cc" fill-opacity=".14" stroke="#00e5cc" stroke-width="1.2" stroke-opacity=".72"/>
+          <circle cx="161" cy="42" r="2.4" fill="#00e5cc" fill-opacity=".9"/>
+
+          <!-- Row 2 — widest, y=60, 3 hexes -->
+          <polygon class="fhc" points="139,60 133.5,50.5 122.5,50.5 117,60 122.5,69.5 133.5,69.5"
+                   fill="#00e5cc" fill-opacity=".12" stroke="#00e5cc" stroke-width="1.1" stroke-opacity=".65"/>
+          <circle cx="128" cy="60" r="2.2" fill="#00e5cc" fill-opacity=".85"/>
+
+          <polygon class="fhd" points="161,60 155.5,50.5 144.5,50.5 139,60 144.5,69.5 155.5,69.5"
+                   fill="#00e5cc" fill-opacity=".16" stroke="#00e5cc" stroke-width="1.2" stroke-opacity=".75"/>
+          <circle cx="150" cy="60" r="2.6" fill="#00e5cc" fill-opacity=".95"/>
+
+          <polygon class="fhe" points="183,60 177.5,50.5 166.5,50.5 161,60 166.5,69.5 177.5,69.5"
+                   fill="#00e5cc" fill-opacity=".12" stroke="#00e5cc" stroke-width="1.1" stroke-opacity=".65"/>
+          <circle cx="172" cy="60" r="2.2" fill="#00e5cc" fill-opacity=".85"/>
+
+          <!-- Row 3 — arch, y=78, 2 hexes -->
+          <polygon class="fhf" points="150,78 144.5,68.5 133.5,68.5 128,78 133.5,87.5 144.5,87.5"
+                   fill="#00e5cc" fill-opacity=".11" stroke="#00e5cc" stroke-width="1" stroke-opacity=".6"/>
+          <circle cx="139" cy="78" r="2" fill="#00e5cc" fill-opacity=".8"/>
+
+          <polygon class="fhg" points="172,78 166.5,68.5 155.5,68.5 150,78 155.5,87.5 166.5,87.5"
+                   fill="#00e5cc" fill-opacity=".11" stroke="#00e5cc" stroke-width="1" stroke-opacity=".6"/>
+          <circle cx="161" cy="78" r="2" fill="#00e5cc" fill-opacity=".8"/>
+
+          <!-- Row 4 — heel, y=96, 1 hex centered -->
+          <polygon class="fhh" points="161,96 155.5,86.5 144.5,86.5 139,96 144.5,105.5 155.5,105.5"
+                   fill="#00e5cc" fill-opacity=".09" stroke="#00e5cc" stroke-width=".9" stroke-opacity=".55"/>
+          <circle cx="150" cy="96" r="1.8" fill="#00e5cc" fill-opacity=".72"/>
+
+          <text x="150" y="116" fill="#00e5cc" font-size="7" font-family="Space Grotesk" text-anchor="middle" fill-opacity=".38" letter-spacing="1.5">BIODIVERSITY FOOTPRINT</text>
+        </svg>
+      </div>
+      <div class="data-card-body">
+        <div class="data-badge">Open Access · Industry-Country Level</div>
+        <div class="data-name">Corporate Biodiversity Footprint</div>
+        <div class="data-desc">Mean CBF from IDL at the industry-country level. Based on an international sample of 2,106 listed firms from 34 countries over the years 2018–2021.</div>
+        <div class="data-source">Source: Garel, A., Romec, A., Sautner, Z., &amp; Wagner, A. F. (2024). Do investors care about biodiversity? <em>Review of Finance</em>, 28(4), 1151–1186.</div>
+        <a href="https://www.dropbox.com/scl/fi/mz6zz944jlba6tw0gedg7/Country-Industry-Average-CBF-values.xlsx?rlkey=hlokv6zffwnpjshs3bx30uhtp&dl=0" target="_blank" class="data-download">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download (.xlsx)
+        </a>
+      </div>
+    </div>
+
+    <!-- Dataset 2: Employee Demographic Diversity -->
+    <div class="data-card">
+      <div class="data-card-vis">
+        <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <radialGradient id="dv2" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#00e5cc" stop-opacity=".14"/>
+              <stop offset="100%" stop-color="#00e5cc" stop-opacity="0"/>
+            </radialGradient>
+            <style>
+              @keyframes db-p{0%,100%{opacity:.5}50%{opacity:.9}}
+              .db1{animation:db-p 2.6s ease-in-out infinite 0s}
+              .db2{animation:db-p 2.6s ease-in-out infinite .4s}
+              .db3{animation:db-p 2.6s ease-in-out infinite .8s}
+              .db4{animation:db-p 2.6s ease-in-out infinite 1.2s}
+              .db5{animation:db-p 2.6s ease-in-out infinite 1.6s}
+            </style>
+          </defs>
+          <ellipse cx="150" cy="50" rx="140" ry="52" fill="url(#dv2)"/>
+
+          <!-- 5 clean person icons: head circle + body trapezoid -->
+          <!-- person 1 — teal -->
+          <circle cx="66"  cy="23" r="9"  fill="#00e5cc" fill-opacity=".12" stroke="#00e5cc" stroke-width="1.2" stroke-opacity=".7"/>
+          <path d="M52 52 Q52 36 66 36 Q80 36 80 52 Z" fill="#00e5cc" fill-opacity=".1" stroke="#00e5cc" stroke-width="1.1" stroke-opacity=".65"/>
+          <!-- person 2 — gold -->
+          <circle cx="101" cy="20" r="9"  fill="#e8b84b" fill-opacity=".12" stroke="#e8b84b" stroke-width="1.2" stroke-opacity=".65"/>
+          <path d="M87 52 Q87 33 101 33 Q115 33 115 52 Z" fill="#e8b84b" fill-opacity=".09" stroke="#e8b84b" stroke-width="1.1" stroke-opacity=".6"/>
+          <!-- person 3 — teal, center/tallest -->
+          <circle cx="150" cy="17" r="10" fill="#00e5cc" fill-opacity=".15" stroke="#00e5cc" stroke-width="1.4" stroke-opacity=".8"/>
+          <path d="M135 52 Q135 30 150 30 Q165 30 165 52 Z" fill="#00e5cc" fill-opacity=".12" stroke="#00e5cc" stroke-width="1.2" stroke-opacity=".7"/>
+          <!-- person 4 — gold -->
+          <circle cx="199" cy="20" r="9"  fill="#e8b84b" fill-opacity=".12" stroke="#e8b84b" stroke-width="1.2" stroke-opacity=".65"/>
+          <path d="M185 52 Q185 33 199 33 Q213 33 213 52 Z" fill="#e8b84b" fill-opacity=".09" stroke="#e8b84b" stroke-width="1.1" stroke-opacity=".6"/>
+          <!-- person 5 — teal -->
+          <circle cx="234" cy="23" r="9"  fill="#00e5cc" fill-opacity=".12" stroke="#00e5cc" stroke-width="1.2" stroke-opacity=".7"/>
+          <path d="M220 52 Q220 36 234 36 Q248 36 248 52 Z" fill="#00e5cc" fill-opacity=".1" stroke="#00e5cc" stroke-width="1.1" stroke-opacity=".65"/>
+
+          <!-- ground line -->
+          <line x1="45" y1="52" x2="255" y2="52" stroke="#00e5cc" stroke-width=".5" stroke-opacity=".2"/>
+
+          <!-- bars: age / gender / ethnicity per person -->
+          <rect class="db1" x="56"  y="88" width="20" height="14" rx="2" fill="#00e5cc" fill-opacity=".45"/>
+          <rect class="db2" x="91"  y="82" width="20" height="20" rx="2" fill="#e8b84b" fill-opacity=".4"/>
+          <rect class="db3" x="140" y="76" width="20" height="26" rx="2" fill="#00e5cc" fill-opacity=".5"/>
+          <rect class="db4" x="189" y="82" width="20" height="20" rx="2" fill="#e8b84b" fill-opacity=".4"/>
+          <rect class="db5" x="224" y="88" width="20" height="14" rx="2" fill="#00e5cc" fill-opacity=".45"/>
+          <line x1="45" y1="102" x2="255" y2="102" stroke="#00e5cc" stroke-width=".4" stroke-opacity=".18"/>
+          <text x="150" y="113" fill="#00e5cc" font-size="7" font-family="Space Grotesk" text-anchor="middle" fill-opacity=".38" letter-spacing="1.5">EMPLOYEE DIVERSITY</text>
+        </svg>
+      </div>
+      <div class="data-card-body">
+        <div class="data-badge">Open Access · Firm Level · US</div>
+        <div class="data-name">Employee Demographic Diversity</div>
+        <div class="data-desc">Employee demographic diversity at the firm level for a sample of 2,269 unique US firms over 2000–2021, covering age, gender, and ethnicity dimensions.</div>
+        <div class="data-source">Source: Frijns, B., Garel, A., &amp; Liao, S. (2024). Employee demographic diversity and firm performance. <em>Financial Management</em>. Forthcoming.</div>
+        <a href="https://osf.io/6j7nc/?view_only=c38d2ba35ee845138619bcec6ad1d898" target="_blank" class="data-download">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download (OSF)
+        </a>
+      </div>
+    </div>
+
+    <!-- Dataset 3: Firm-Level Nature Dependence -->
+    <div class="data-card">
+      <div class="data-card-vis">
+        <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <radialGradient id="dv3a" cx="28%" cy="50%" r="40%">
+              <stop offset="0%" stop-color="#00e5cc" stop-opacity=".2"/>
+              <stop offset="100%" stop-color="#00e5cc" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="dv3b" cx="78%" cy="50%" r="35%">
+              <stop offset="0%" stop-color="#e8b84b" stop-opacity=".15"/>
+              <stop offset="100%" stop-color="#e8b84b" stop-opacity="0"/>
+            </radialGradient>
+            <style>
+              @keyframes nd-f{to{stroke-dashoffset:-28}}
+              .nd1{stroke-dasharray:5 9;animation:nd-f 2.2s linear infinite 0s}
+              .nd2{stroke-dasharray:5 9;animation:nd-f 2.2s linear infinite .55s}
+              .nd3{stroke-dasharray:5 9;animation:nd-f 2.2s linear infinite 1.1s}
+            </style>
+          </defs>
+          <ellipse cx="80"  cy="58" rx="72" ry="50" fill="url(#dv3a)"/>
+          <ellipse cx="225" cy="58" rx="65" ry="45" fill="url(#dv3b)"/>
+
+          <!-- LEAF — simple, clean, large -->
+          <path d="M46 90 Q38 62 52 38 Q66 14 84 24 Q102 34 96 60 Q90 82 46 90 Z"
+                fill="#00e5cc" fill-opacity=".07" stroke="#00e5cc" stroke-width="1.5" stroke-opacity=".7"/>
+          <!-- central vein -->
+          <path d="M46 90 Q66 58 84 24" fill="none" stroke="#00e5cc" stroke-width=".9" stroke-opacity=".45"/>
+          <!-- side veins -->
+          <path d="M62 72 Q72 63 80 50" fill="none" stroke="#00e5cc" stroke-width=".6" stroke-opacity=".3"/>
+          <path d="M55 82 Q65 74 72 62" fill="none" stroke="#00e5cc" stroke-width=".5" stroke-opacity=".25"/>
+          <!-- leaf glow -->
+          <circle cx="72" cy="54" r="4" fill="#00e5cc" fill-opacity=".65"/>
+          <circle cx="72" cy="54" r="8" fill="#00e5cc" fill-opacity=".1"/>
+
+          <!-- 3 animated flow lines -->
+          <path class="nd1" d="M97 36 C130 28 162 26 190 24" fill="none" stroke="#00e5cc" stroke-width="1.2" stroke-opacity=".65" stroke-linecap="round"/>
+          <path class="nd2" d="M98 58 C132 58 164 58 190 58" fill="none" stroke="#00e5cc" stroke-width="1.2" stroke-opacity=".6"  stroke-linecap="round"/>
+          <path class="nd3" d="M97 78 C130 86 162 88 190 90" fill="none" stroke="#e8b84b" stroke-width="1.1" stroke-opacity=".55" stroke-linecap="round"/>
+
+          <!-- 3 industry nodes — simple circles with icons -->
+          <!-- top: factory -->
+          <circle cx="207" cy="24" r="14" fill="#e8b84b" fill-opacity=".07" stroke="#e8b84b" stroke-width="1" stroke-opacity=".5"/>
+          <rect x="200" y="19" width="14" height="10" rx="1" fill="none" stroke="#e8b84b" stroke-width=".9" stroke-opacity=".7"/>
+          <rect x="202" y="16" width="3"  height="3"  fill="#e8b84b" fill-opacity=".5"/>
+          <rect x="208" y="16" width="3"  height="3"  fill="#e8b84b" fill-opacity=".5"/>
+          <line x1="200" y1="24" x2="214" y2="24" stroke="#e8b84b" stroke-width=".6" stroke-opacity=".4"/>
+
+          <!-- middle: gear -->
+          <circle cx="207" cy="58" r="14" fill="#e8b84b" fill-opacity=".07" stroke="#e8b84b" stroke-width="1" stroke-opacity=".5"/>
+          <circle cx="207" cy="58" r="7"  fill="none" stroke="#e8b84b" stroke-width=".9" stroke-opacity=".65"/>
+          <circle cx="207" cy="58" r="3"  fill="#e8b84b" fill-opacity=".55"/>
+          <rect x="205" y="49" width="4" height="3" rx=".5" fill="#e8b84b" fill-opacity=".5"/>
+          <rect x="205" y="64" width="4" height="3" rx=".5" fill="#e8b84b" fill-opacity=".5"/>
+          <rect x="198" y="56" width="3" height="4" rx=".5" fill="#e8b84b" fill-opacity=".5"/>
+          <rect x="213" y="56" width="3" height="4" rx=".5" fill="#e8b84b" fill-opacity=".5"/>
+
+          <!-- bottom: building -->
+          <circle cx="207" cy="90" r="14" fill="#e8b84b" fill-opacity=".07" stroke="#e8b84b" stroke-width="1" stroke-opacity=".5"/>
+          <rect x="200" y="82" width="14" height="14" rx="1" fill="none" stroke="#e8b84b" stroke-width=".9" stroke-opacity=".65"/>
+          <rect x="202" y="84" width="3" height="3" rx=".3" fill="#e8b84b" fill-opacity=".45"/>
+          <rect x="208" y="84" width="3" height="3" rx=".3" fill="#e8b84b" fill-opacity=".45"/>
+          <rect x="202" y="89" width="3" height="3" rx=".3" fill="#e8b84b" fill-opacity=".35"/>
+          <rect x="208" y="89" width="3" height="3" rx=".3" fill="#e8b84b" fill-opacity=".35"/>
+          <rect x="204" y="93" width="6" height="3" rx=".3" fill="#e8b84b" fill-opacity=".25"/>
+
+          <text x="150" y="113" fill="#00e5cc" font-size="7" font-family="Space Grotesk" text-anchor="middle" fill-opacity=".38" letter-spacing="1.5">NATURE DEPENDENCE · 117 COUNTRIES</text>
+        </svg>
+      </div>
+      <div class="data-card-body">
+        <div class="data-badge">Open Access · Global · 117 Countries</div>
+        <div class="data-name">Firm-Level Nature Dependence</div>
+        <div class="data-desc">Measures of nature dependence to ENCORE ecosystem services for 31,772 listed firms from 117 countries between 2010 and 2023. Includes both granular ecosystem service scores and an overall NatureDep index.</div>
+        <div class="data-source">Source: Garel, A., Romec, A., Sautner, Z., &amp; Wagner, A. F. (2025). Firm-level nature dependence. <em>Review of Finance</em>. Forthcoming.</div>
+        <a href="https://osf.io/d85e7/" target="_blank" class="data-download">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download (OSF)
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /data-grid -->
+</div><!-- /page-wrap -->
+
+</body>
+</html>
+

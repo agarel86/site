@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LSEG Finance Data with Python — Alexandre Garel</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.course-layout {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  height: calc(100vh - 52px);
+  overflow: hidden;
+}
+
+/* ── Sidebar ── */
+.course-sidebar {
+  border-right: 1px solid rgba(0,229,204,.1);
+  background: rgba(0,229,204,.018);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.sidebar-header {
+  padding: 22px 20px 14px;
+  border-bottom: 1px solid rgba(0,229,204,.08);
+  flex-shrink: 0;
+}
+.sidebar-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: 1.8px;
+  text-transform: uppercase; color: var(--teal);
+  margin-bottom: 2px;
+}
+.sidebar-course-name {
+  font-size: 11px; color: var(--muted); line-height: 1.5;
+}
+.sidebar-files { padding: 12px 0; flex: 1; overflow-y: auto; }
+
+.file-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 20px;
+  cursor: pointer; transition: background .15s, color .15s;
+  border-left: 2px solid transparent;
+  text-decoration: none;
+}
+.file-item:hover { background: rgba(0,229,204,.05); }
+.file-item.active {
+  background: rgba(0,229,204,.07);
+  border-left-color: var(--teal);
+}
+.file-icon {
+  width: 28px; height: 34px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 3px;
+}
+.file-icon.pdf  { background: rgba(220,50,50,.12); border: 1px solid rgba(220,50,50,.25); }
+.file-icon.html { background: rgba(150,120,255,.12); border: 1px solid rgba(150,120,255,.25); }
+.file-icon svg  { width: 14px; height: 14px; }
+.file-info { flex: 1; min-width: 0; }
+.file-name {
+  font-size: 12px; font-weight: 500; color: var(--white);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+.file-type {
+  font-size: 9.5px; letter-spacing: .8px; text-transform: uppercase;
+  color: var(--muted);
+}
+.file-item.active .file-name { color: var(--teal); }
+
+.sidebar-back {
+  padding: 14px 20px;
+  border-top: 1px solid rgba(0,229,204,.07);
+  flex-shrink: 0;
+}
+.sidebar-back a {
+  font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color .2s;
+}
+.sidebar-back a:hover { color: var(--white); }
+
+/* ── Main viewer ── */
+.course-main {
+  display: flex; flex-direction: column;
+  height: 100%; overflow: hidden;
+}
+.viewer-toolbar {
+  flex-shrink: 0;
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 28px;
+  border-bottom: 1px solid rgba(0,229,204,.07);
+  background: rgba(7,11,18,.7);
+}
+.viewer-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; font-weight: 600; color: var(--white); flex: 1;
+}
+.viewer-btn {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 10px; font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600; letter-spacing: .8px; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 3px;
+  border: 1px solid rgba(0,229,204,.3); color: var(--teal);
+  background: transparent; text-decoration: none; transition: background .2s;
+  cursor: pointer;
+}
+.viewer-btn:hover { background: rgba(0,229,204,.1); }
+.viewer-btn svg { width: 11px; height: 11px; }
+
+.file-iframe {
+  flex: 1; width: 100%; border: none;
+  background: #fff;
+}
+
+/* Welcome state */
+.welcome-state {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: var(--muted); text-align: center; padding: 40px;
+}
+.welcome-state svg { width: 52px; height: 52px; opacity: .12; margin-bottom: 18px; }
+.welcome-state h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px; font-weight: 600;
+  color: rgba(221,229,240,.35); margin-bottom: 8px;
+}
+.welcome-state p { font-size: 13px; line-height: 1.65; color: var(--muted); max-width: 320px; }
+
+@media (max-width: 700px) {
+  .course-layout { grid-template-columns: 1fr; height: auto; }
+  .course-sidebar { height: auto; border-right: none; border-bottom: 1px solid rgba(0,229,204,.1); }
+  .course-main { height: 80vh; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html">Alexandre <span>Garel</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Main</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="working-papers.html">Working Papers</a></li>
+    <li><a href="press-coverage.html">Press</a></li>
+    <li><a href="data.html">Data</a></li>
+    <li><a href="teaching.html" class="active">Teaching</a></li>
+  </ul>
+</nav>
+
+<div class="course-layout">
+
+  <!-- Sidebar -->
+  <aside class="course-sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-label">Course Material</div>
+      <div class="sidebar-course-name">LSEG Finance Data<br>with Python</div>
+    </div>
+
+    <div class="sidebar-files">
+
+      <!-- Slides PDF -->
+      <div class="file-item" id="fi-slides" onclick="loadFile('lseg-course/Research Methods Slides.pdf', 'Research Methods Slides', 'pdf', 'fi-slides')">
+        <div class="file-icon pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e05555" stroke-width="1.8" stroke-linecap="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <div class="file-info">
+          <div class="file-name">Research Methods Slides</div>
+          <div class="file-type">PDF · Slides</div>
+        </div>
+      </div>
+
+      <!-- Notebook HTML -->
+      <div class="file-item" id="fi-notebook" onclick="loadFile('lseg-course/research_methods_notebook.html', 'Research Methods Notebook', 'html', 'fi-notebook')">
+        <div class="file-icon html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#a890ff" stroke-width="1.8" stroke-linecap="round">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div class="file-info">
+          <div class="file-name">Research Methods Notebook</div>
+          <div class="file-type">HTML · Notebook</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar-back">
+      <a href="teaching.html">← Back to Teaching</a>
+    </div>
+  </aside>
+
+  <!-- Main viewer -->
+  <main class="course-main" id="course-main">
+
+    <div class="viewer-toolbar" id="viewer-toolbar" style="display:none">
+      <div class="viewer-title" id="viewer-title"></div>
+      <a class="viewer-btn" id="btn-download" href="#" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+      </a>
+      <a class="viewer-btn" id="btn-open" href="#" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Open tab
+      </a>
+    </div>
+
+    <div class="welcome-state" id="welcome-state">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      <h2>Select a file to view</h2>
+      <p>Choose the slides or the notebook from the panel on the left.</p>
+    </div>
+
+    <iframe class="file-iframe" id="file-iframe" style="display:none" title="Course material"></iframe>
+
+  </main>
+</div>
+
+<script>
+function loadFile(src, title, type, itemId) {
+  // active state
+  document.querySelectorAll('.file-item').forEach(f => f.classList.remove('active'));
+  document.getElementById(itemId).classList.add('active');
+
+  // toolbar
+  const toolbar = document.getElementById('viewer-toolbar');
+  toolbar.style.display = 'flex';
+  document.getElementById('viewer-title').textContent = title;
+  document.getElementById('btn-download').href = src;
+  document.getElementById('btn-open').href = src;
+
+  // hide welcome, show iframe
+  document.getElementById('welcome-state').style.display = 'none';
+  const iframe = document.getElementById('file-iframe');
+  iframe.style.display = 'block';
+  iframe.src = src;
+}
+</script>
+</body>
+</html>
+

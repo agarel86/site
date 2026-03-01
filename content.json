@@ -1,0 +1,289 @@
+{
+  "site": {
+    "title": "Alexandre Garel",
+    "url": "https://sites.google.com/view/alexandre-garel/accueil"
+  },
+  "pages": {
+    "home": {
+      "title": "Alexandre Garel's Website",
+      "url": "https://sites.google.com/view/alexandre-garel/accueil",
+      "bio": "Welcome to my personal website. I am currently an Associate Professor in Sustainable Finance at Audencia Business School and Affiliated Researcher at the HKU's Research Institute on Governance, Environment and Social issues. My research focus on corporate finance, behavioral finance, climate finance, and biodiversity finance. I am particularly interested in the voting behavior of ESG funds, the ESG engagement of institutional investors, biodiversity dependence and transition risks, and the lack of market discipline on climate commitments.\n\nI served as scientific advisor for several finance-related projects in the industry. I have been a member of the scientific committee of Iceberg Data Lab and currently serve on the scientific committee of a consortium of French institutions initiating two large biodiversity funds. I am also a qualified expert for the FIR (French Forum for Sustainable and Responsible Investment).",
+      "links": [
+        { "text": "Audencia Business School", "url": "https://www.audencia.com/faculte-recherche/corps-professoral/cv-garel" },
+        { "text": "HKU's Research Institute on Governance, Environment and Social issues", "url": "https://hkujcesgri.hku.hk/" },
+        { "text": "Iceberg Data Lab", "url": "https://www.icebergdatalab.com/" },
+        { "text": "consortium of French institutions", "url": "https://impact-investor.com/french-institutional-investors-pick-mirova-to-manage-e100m-biodiversity-fund/" },
+        { "text": "expert for the FIR", "url": "https://www.frenchsif.org/isr_esg/en/french-sif/" }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "url": "https://sites.google.com/view/alexandre-garel/publications",
+      "items": [
+        {
+          "citation": "Garel, A., Romec, A., Sautner, Z., & Wagner, A. F. (2025). Firm-Level Nature Dependence. Review of Finance. Forthcoming.",
+          "url": "https://ssrn.com/abstract=5196826",
+          "year": 2025,
+          "journal": "Review of Finance",
+          "status": "Forthcoming",
+          "abstract": "We construct firm-level measures of dependence on ecosystem services (NatureDep scores) for 31,772 listed firms in 117 countries between 2010 and 2023, combining the ENCORE database with firm-level revenue information. The scores capture exposure to physical nature risks, with financial effects additionally depending on the deterioration of ecosystem services. NatureDep scores positively correlate with impact on biodiversity, are unrelated to nature-related actions disclosed in the CDP survey, are not reflected in firms' corporate disclosures, and predict BlackRock's biodiversity-related engagements. We employ the scores in two applications. First, the scores relate positively to measures of downside risk, with effects stemming mostly from high dependencies on water-related ecosystem services. Second, the scores predict nature-related incidents that arise when high nature dependence leads firms to damage nature, overuse resources, or trigger disputes with local communities. We conclude that investors started to pay attention to nature dependence, while corporate action and disclosure remain limited.",
+          "topics": ["nature dependence", "biodiversity", "ecosystem services", "climate finance"]
+        },
+        {
+          "citation": "Di Giuli, A., Garel, A., Michaely, R., & Romec, A. (2024). Climate Change and Mutual Fund Voting on Climate Proposals. Management Science. Forthcoming.",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3997730",
+          "year": 2024,
+          "journal": "Management Science",
+          "status": "Forthcoming",
+          "abstract": "This paper explores whether investors' personal experience with climate change affects their voting behavior on climate-change-related proposals. We find that fund managers exposed to abnormally hot temperatures are significantly more likely to support climate proposals. We further show that the effect is persistent. We observe significant heterogeneity in the effect of hot temperatures, depending on firm-level climate risk, the quality of the proposals, fund investment strategy, and prior awareness of climate change. Fund managers' personal experience with climate change matters for the outcome of climate proposals as it affects the aggregate support they receive. Fund managers exposed to abnormally hot temperatures are also more likely to divest from stocks with greater exposure to climate change.",
+          "topics": ["climate change", "mutual funds", "voting", "ESG"]
+        },
+        {
+          "citation": "Garel, A., Romec, A., Sautner, Z., & Wagner, A. F. (2024). Do investors care about biodiversity?. Review of Finance, 28(4), 1151-1186.",
+          "url": "https://academic.oup.com/rof/article/28/4/1151/7645412",
+          "year": 2024,
+          "journal": "Review of Finance",
+          "volume": "28(4)",
+          "pages": "1151-1186",
+          "abstract": "This paper introduces a new measure of a firm's negative impact on biodiversity, the corporate biodiversity footprint, and studies whether it is priced in an international sample of stocks. On average, the corporate biodiversity footprint does not explain the cross-section of returns between 2019 and 2022. However, a biodiversity footprint premium (higher returns for firms with larger footprints) began emerging in October 2021 after the Kunming Declaration, which capped the first part of the UN Biodiversity Conference (COP15). Consistent with this finding, stocks with large footprints lost value in the days after the Kunming Declaration. The launch of the Taskforce for Nature-related Financial Disclosures (TNFD) in June 2021 had a similar effect. These results indicate that investors have started to require a risk premium upon the prospect of, and uncertainty about, future regulation or litigation to preserve biodiversity.",
+          "topics": ["biodiversity", "asset pricing", "ESG", "climate finance"]
+        },
+        {
+          "citation": "Frijns, B., Garel, A., & Liao, S. (2024). Employee demographic diversity and firm performance. Financial Management. Forthcoming.",
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/fima.12484",
+          "year": 2024,
+          "journal": "Financial Management",
+          "status": "Forthcoming",
+          "abstract": "This article examines the relationship between employee demographic diversity and firm performance measured by future stock returns for a large sample of US public companies. We use novel demographic data extracted from employees' online profiles and resumes and focus on three key aspects of employee demographic diversity: age, gender, and ethnicity. We find no evidence supportive of an outperformance associated with greater employee-diverse companies, neither using portfolio-sorting approaches nor cross-sectional and panel regressions. We also find no significant associations between employee demographic diversity and ROE, gross profit, and labor productivity.",
+          "topics": ["diversity", "ESG", "corporate finance", "firm performance"]
+        },
+        {
+          "citation": "Bourveau, T., Garel, A., Joos, P., & Petit-Romec, A. (2024). When attention is away, analysts misplay: distraction and analyst forecast performance. Review of Accounting Studies, 29(1), 916-958.",
+          "url": "https://link.springer.com/article/10.1007/s11142-022-09733-w",
+          "year": 2024,
+          "journal": "Review of Accounting Studies",
+          "volume": "29(1)",
+          "pages": "916-958",
+          "abstract": "We construct a distraction measure based on extreme industry returns to gauge whether analysts' attention is away from certain stocks under coverage. We find that temporarily distracted analysts make less accurate forecasts, revise forecasts less frequently, and publish less informative forecast revisions, relative to undistracted analysts. Further, at the firm level, analyst distraction carries real negative externalities by increasing information asymmetry for stocks that suffer from a larger extent of analyst distraction during a given quarter.",
+          "topics": ["analyst forecasts", "attention", "behavioral finance"]
+        },
+        {
+          "citation": "Derrien, F., Garel, A., Romec, A., & Weisskopf, J. P. (2024). Online reputation and debt capacity. Journal of Financial and Quantitative Analysis, 59(3), 1100-1140.",
+          "url": "https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/online-reputation-and-debt-capacity/B11465CF56C65158C87C4B9CE420BA72",
+          "year": 2024,
+          "journal": "Journal of Financial and Quantitative Analysis",
+          "volume": "59(3)",
+          "pages": "1100-1140",
+          "abstract": "We explore the effects of online customer ratings on financial policy. Using a large sample of Parisian restaurants, we find a positive and economically significant relationship between customer ratings and restaurant debt. We use the locally exogenous variations in customer ratings resulting from the rounding of scores in regression discontinuity tests to establish causality. Favorable online ratings reduce cash flow risk and increase resilience to demand shocks.",
+          "topics": ["online reputation", "debt capacity", "corporate finance"]
+        },
+        {
+          "citation": "Edmans, A., Fernandez-Perez, A., Garel, A., & Indriawan, I. (2022). Music sentiment and stock returns around the world. Journal of Financial Economics, 145(2), 234-254.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0304405X21003718",
+          "year": 2022,
+          "journal": "Journal of Financial Economics",
+          "volume": "145(2)",
+          "pages": "234-254",
+          "abstract": "This paper introduces a real-time, continuous measure of national sentiment that is language-free and thus comparable globally: the positivity of songs that individuals choose to listen to. We validate our music-based sentiment measure by correlating it with mood swings induced by seasonal factors, weather conditions, and COVID-related restrictions. We find that music sentiment is positively correlated with same-week equity market returns and negatively correlated with next-week returns, consistent with sentiment-induced temporary mispricing.",
+          "topics": ["sentiment", "behavioral finance", "stock returns", "music"]
+        },
+        {
+          "citation": "Garel, A., Petit-Romec, A., & Vander Vennet, R. (2022). Institutional shareholders and bank capital. Journal of Financial Intermediation, 50, 100960.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1042957322000134",
+          "year": 2022,
+          "journal": "Journal of Financial Intermediation",
+          "volume": "50",
+          "abstract": "We examine the relationship between institutional ownership and bank capital. Using a large sample of U.S. banks, we show that banks with greater institutional ownership operate with substantially higher capital ratios. We further address endogeneity concerns using an instrumental variable strategy based on the inclusion of banks in the S&P index.",
+          "topics": ["bank capital", "institutional investors", "corporate finance"]
+        },
+        {
+          "citation": "Bourveau, T., Brochet, F., & Garel, A. (2022). The capital market consequences of tenure-based voting rights: Evidence from the Florange Act. Management Science, 68(12), 9107-9128.",
+          "url": "https://pubsonline.informs.org/doi/full/10.1287/mnsc.2022.4320",
+          "year": 2022,
+          "journal": "Management Science",
+          "volume": "68(12)",
+          "pages": "9107-9128",
+          "abstract": "We examine the consequences of a regulatory intervention aimed at generalizing tenure voting in French public companies. The 2014 Florange Act departs from the 'one share one vote' principle by automatically granting double-voting rights (DVR) to shares held for at least two years. We document that firms that adopt DVR by default experience a decrease in long-term foreign institutional ownership and significantly underperform in terms of stock returns after Florange.",
+          "topics": ["voting rights", "corporate governance", "French law"]
+        },
+        {
+          "citation": "Garel, A., & Petit-Romec, A. (2021). Investor rewards to environmental responsibility: Evidence from the COVID-19 crisis. Journal of Corporate Finance, 68, 101948.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0929119921000699",
+          "year": 2021,
+          "journal": "Journal of Corporate Finance",
+          "volume": "68",
+          "abstract": "We study the cross-section of stock returns during the COVID-19 shock to explore investors' views and expectations about environmental issues. The results show that firms with responsible strategies on environmental issues experience better stock returns. This effect is mainly driven by initiatives addressing climate change.",
+          "topics": ["ESG", "COVID-19", "environmental finance", "stock returns"]
+        },
+        {
+          "citation": "Noury, A., François, A., Gergaud, O., & Garel, A. (2021). How does COVID-19 affect electoral participation? evidence from the French municipal elections. PloS one, 16(2), e0247026.",
+          "year": 2021,
+          "journal": "PloS One",
+          "volume": "16(2)",
+          "abstract": "This article investigates the effects of the COVID-19 outbreak on electoral participation. We study the French municipal elections that took place at the very beginning of the ongoing pandemic. We establish a robust relationship between the depressed turnout rate and the disease.",
+          "topics": ["COVID-19", "electoral participation", "political economy"]
+        },
+        {
+          "citation": "Garel, A., Martin-Flores, J. M., Petit-Romec, A., & Scott, A. (2021). Institutional investor distraction and earnings management. Journal of Corporate Finance, 66, 101801.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0929119920302455",
+          "year": 2021,
+          "journal": "Journal of Corporate Finance",
+          "volume": "66",
+          "abstract": "We explore the implications of institutional investor distraction for earnings management. We find that firms with distracted institutional shareholders engage more in both accrual-based and real earnings management. Our results suggest that managers exploit the loosening in monitoring intensity resulting from investor distraction.",
+          "topics": ["institutional investors", "earnings management", "corporate governance"]
+        },
+        {
+          "citation": "Garel, A., & Petit-Romec, A. (2021). Engaging employees for the long run: Long-term investors and employee-related CSR. Journal of Business Ethics, 174(1), 35-63.",
+          "url": "https://link.springer.com/article/10.1007/s10551-020-04572-8",
+          "year": 2021,
+          "journal": "Journal of Business Ethics",
+          "volume": "174(1)",
+          "pages": "35-63",
+          "abstract": "This article explores whether and how long-term investors influence non-executive employees' incentives. We conjecture that long-term investors foster employee-related CSR to motivate employees to engage in long-term investment projects. We find that long-term investor ownership is a strong driver of employee-related CSR.",
+          "topics": ["long-term investors", "CSR", "employees", "corporate governance"]
+        },
+        {
+          "citation": "Garel, A., Martín-Flores, J. M., & Petit-Romec, A. (2020). Stock market listing and the persistence of bank performance across crises. Journal of Banking & Finance, 118, 105885.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0378426620301515",
+          "year": 2020,
+          "journal": "Journal of Banking & Finance",
+          "volume": "118",
+          "abstract": "This paper examines whether stock market listing influences the persistence of bank performance across crises. We find that for both publicly and privately held banks, bank performance during the 1998 crisis is a strong predictor of bank performance during the 2007–2008 crisis.",
+          "topics": ["bank performance", "financial crises", "corporate finance"]
+        },
+        {
+          "citation": "Chen, J., Garel, A., & Tourani-Rad, A. (2019). The value of academics: Evidence from academic independent director resignations in China. Journal of Corporate Finance, 58, 393-414.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0929119918306369",
+          "year": 2019,
+          "journal": "Journal of Corporate Finance",
+          "volume": "58",
+          "pages": "393-414",
+          "abstract": "We use academic independent director resignations induced by the introduction of Regulation 11 prohibiting academics from holding positions in Chinese public companies to examine their contribution to firm value. We document a negative market reaction to academic director resignations.",
+          "topics": ["corporate governance", "board of directors", "China"]
+        },
+        {
+          "citation": "Garel, A., & Petit-Romec, A. (2017). Bank capital in the crisis: It's not just how much you have but who provides it. Journal of banking & finance, 75, 152-166.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0378426616302047",
+          "year": 2017,
+          "journal": "Journal of Banking & Finance",
+          "volume": "75",
+          "pages": "152-166",
+          "abstract": "We investigate whether the investment horizon of bank capital providers matters for bank performance during the recent financial crisis. We observe that banks with more short-term investor ownership have worse stock returns during the crisis, partially because they took more risk prior to the crisis but mainly because they experienced higher selling pressure during the crisis.",
+          "topics": ["bank capital", "financial crisis", "institutional investors"]
+        }
+      ]
+    },
+    "working_papers": {
+      "title": "Working Papers",
+      "url": "https://sites.google.com/view/alexandre-garel/working-papers",
+      "items": [
+        {
+          "citation": "Garel, A., Cheng, E. Minimum Energy Performance Standards and Housing Price Capitalization: Evidence from France's Rental Ban on 'Energy Sieves'.",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5815923",
+          "status": "Working Paper",
+          "abstract": "Energy performance disclosure is increasingly paired with minimum energy performance standards to accelerate the capitalization of energy inefficiency into housing prices and strengthen homeowners' incentives to retrofit inefficient dwellings. We study the 2021 French policy implementing a progressive rental ban on the least energy-efficient houses ('energy sieves') and examine whether this minimum standard affected housing prices. Using more than one million housing transactions over 2014–2024, we document that energy sieves sell at an additional discount of about 9 percentage points following the policy announcement.",
+          "topics": ["energy performance", "housing prices", "real estate", "climate policy"]
+        },
+        {
+          "citation": "Garel, A., Michaely, R., and Romec, A. Climate Disclosure and Director Elections.",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5085984",
+          "status": "R&R at Management Science",
+          "abstract": "This study investigates the impact of climate-related disclosure on investor support for directors in board elections. Firms not disclosing carbon emissions receive significantly lower support for their directors. Firms initiating climate disclosure see increased director support. Sustainable funds and universal investors are key drivers of this trend.",
+          "topics": ["climate disclosure", "director elections", "corporate governance", "ESG"]
+        },
+        {
+          "citation": "Derrien, F., Garel, A., Romec, A., and Zhou, F. Climate Risk Engagements.",
+          "url": "https://papers.ssrn.com/abstract=5051906",
+          "status": "Working Paper",
+          "abstract": "We study climate-risk related engagements by one of the world's largest investors. Climate risk engagements represent a growing fraction of ESG engagements and are more frequent in high carbon emissions industries. Following a climate risk engagement, targeted firms are more likely to commit to adopt a science-based climate target and to disclose climate-related information.",
+          "topics": ["climate risk", "shareholder engagement", "ESG", "carbon emissions"]
+        },
+        {
+          "citation": "Bourveau, T., Garel, A., and Romec, A. Mandatory Carbon Disclosure: Evidence from France.",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4779950",
+          "status": "R&R at European Accounting Review",
+          "abstract": "We examine firms' response to a carbon disclosure mandate imposed on French firms with more than 500 employees by the Grenelle II law. We find that only half of the firms subject to the mandate comply and file at least one carbon report between 2014 and 2021.",
+          "topics": ["carbon disclosure", "climate policy", "France", "ESG"]
+        },
+        {
+          "citation": "Di Giuli, A., Garel, A., and Romec, A. The Voting Behavior of Women-Led Mutual Funds. ECGI Working Paper.",
+          "url": "https://ssrn.com/abstract=42147622",
+          "status": "R&R at Journal of Corporate Finance",
+          "abstract": "This paper examines the voting behavior of women-led mutual funds. We find that women-led mutual funds are more likely to support environmental and social (ES) proposals, but not governance ones. Women-led mutual funds are also more likely to vote with management in firms headed by female CEOs.",
+          "topics": ["gender", "mutual funds", "voting", "ESG"]
+        }
+      ]
+    },
+    "press_coverage": {
+      "title": "Press Coverage",
+      "url": "https://sites.google.com/view/alexandre-garel/press-coverage",
+      "items": [
+        { "title": "Opinion | Climat : les marchés anticipent le nouveau mandat Trump", "outlet": "Les Echos", "date": "2024-11-27" },
+        { "title": "Penser les risques de transition et physiques des entreprises liés à la biodiversité : l'après COP16", "outlet": "LinkedIn", "date": "2024-11-07" },
+        { "title": "Employee demographic diversity and firm performance", "outlet": "LinkedIn", "date": "2024-10-28" },
+        { "title": "Do Investors Care about Biodiversity?", "outlet": "Harvard Law School Forum on Corporate Governance", "date": "2024-08-14" },
+        { "title": "Mon épargne contribue-t-elle à la restauration de la biodiversité ?", "outlet": "The Conversation", "date": "2024-07-02" },
+        { "title": "L'apparition de régulations pour protéger la biodiversité expose les entreprises à des risques de transition", "outlet": "Le Monde", "date": "2024-06-17" },
+        { "title": "On fait le bilan… du bilan carbone", "outlet": "The Conversation", "date": "2024-05-08" },
+        { "title": "Changement du label ISR : vers une exclusion sans effets réels ?", "outlet": "LinkedIn", "date": "2023-11-13" },
+        { "title": "Comment la musique permet de deviner l'évolution des Bourses", "outlet": "Les Echos", "date": "2023-08-15" },
+        { "title": "Les entreprises réduisent plus leurs émissions de CO₂ lorsque leurs dirigeants ont été exposés à des températures trop élevées", "outlet": "Le Monde", "date": "2022-10-09" },
+        { "title": "Bourse : la dépression saisonnière fait de vous un investisseur plus responsable", "outlet": "Les Echos", "date": "2022-09-07" },
+        { "title": "Feeling Sad? You're More Likely to Put Money Into ESG Funds", "outlet": "Bloomberg", "date": "2022-09-01" },
+        { "title": "Huit ans après, le bilan mitigé de la loi Florange", "outlet": "The Conversation", "date": "2022-02-13" },
+        { "title": "How the olympics could affect the stock market?", "outlet": "The Wall Street Journal", "date": "2022-02-03" },
+        { "title": "Mood, music and money: what our Spotify playlists reveal about the emotional nature of financial markets", "outlet": "The Conversation", "date": "2021-08-26" },
+        { "title": "Investors reward environmental responsibility in the COVID-19 crisis", "outlet": "VoxEU", "date": "2020-07-21" },
+        { "title": "Quel sens donner à la chute des cours de bourse pendant la crise du Covid-19 ?", "outlet": "The Conversation", "date": "2020-07-02" },
+        { "title": "Effets réels de la présence des investisseurs de long terme dans les entreprises cotées", "outlet": "Réalités industrielles", "date": "2019-11-03" },
+        { "title": "Loi Florange : les droits de vote double découragent les grands fonds étrangers", "outlet": "Les Echos", "date": "2019-02-11" }
+      ]
+    },
+    "data": {
+      "title": "Data",
+      "url": "https://sites.google.com/view/alexandre-garel/data",
+      "datasets": [
+        {
+          "name": "Corporate Biodiversity Footprint",
+          "description": "Mean CBF from IDL at the industry-country level. Based on an international sample of 2,106 listed firms from 34 countries over the years 2018–2021.",
+          "source_paper": "Garel, A., Romec, A., Sautner, Z., & Wagner, A. F. (2024). Do investors care about biodiversity?. Review of Finance, 28(4), 1151-1186.",
+          "download_url": "https://www.dropbox.com/scl/fi/mz6zz944jlba6tw0gedg7/Country-Industry-Average-CBF-values.xlsx?rlkey=hlokv6zffwnpjshs3bx30uhtp&dl=0"
+        },
+        {
+          "name": "Employee Demographic Diversity",
+          "description": "Employee Demographic Diversity at the firm level for a sample of 2,269 unique US firms over 2000-2021.",
+          "source_paper": "Frijns, B., Garel, A., & Liao, S. (2024). Employee demographic diversity and firm performance. Financial Management.",
+          "download_url": "https://osf.io/6j7nc/?view_only=c38d2ba35ee845138619bcec6ad1d898"
+        },
+        {
+          "name": "Firm-Level Nature Dependence",
+          "description": "Measures of nature dependence to ENCORE ecosystem services and overall measure of nature dependence available for 31,772 listed firms from 117 countries between 2010 and 2023.",
+          "source_paper": "Garel, A., Romec, A., Sautner, Z., & Wagner, A. F. (2025). Firm-level nature dependence. Review of Finance. Forthcoming.",
+          "download_url": "https://osf.io/d85e7/"
+        }
+      ]
+    },
+    "teaching": {
+      "title": "Teaching",
+      "url": "https://sites.google.com/view/alexandre-garel/teaching",
+      "courses": [
+        {
+          "name": "Sustainable Investing",
+          "level": "Post-graduate",
+          "description": "Measurement of the sustainable profile of a company, ESG investment strategies, exit versus voice, performance of ESG investing, real effects of ESG investment, greenwashing, climate funds, biodiversity funds, human capital funds."
+        },
+        {
+          "name": "Machine Learning for Finance",
+          "level": "Post-graduate",
+          "description": "Machine Learning, Neural Networks, LLM, and AI with Python applied to finance."
+        }
+      ]
+    },
+    "cv": {
+      "title": "CV",
+      "url": "https://sites.google.com/view/alexandre-garel/cv",
+      "note": "CV content is hosted as an embedded file on the Google Sites page and not available as plain text."
+    }
+  },
+  "nav": ["Accueil", "Publications", "Working Papers", "Press Coverage", "Data", "Teaching", "CV"]
+}

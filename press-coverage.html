@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Press Coverage — Alexandre Garel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.outlet-legend {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px;
+}
+.outlet-tag {
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 2px; cursor: pointer;
+  border: 1px solid rgba(0,229,204,.2);
+  color: var(--muted); background: transparent;
+  transition: all .2s; font-family: 'Inter', sans-serif;
+}
+.outlet-tag:hover, .outlet-tag.on { color: var(--teal); border-color: var(--teal); background: rgba(0,229,204,.07); }
+
+.press-list { display: flex; flex-direction: column; gap: 0; }
+
+.press-item {
+  display: flex; align-items: flex-start; gap: 20px;
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(0,229,204,.06);
+  transition: background .18s;
+  text-decoration: none;
+  color: inherit;
+}
+.press-item:first-child { border-top: 1px solid rgba(0,229,204,.06); }
+.press-item:hover { background: rgba(0,229,204,.04); }
+
+.press-date {
+  flex-shrink: 0; width: 76px;
+  font-size: 10.5px; letter-spacing: .5px;
+  color: var(--muted); padding-top: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.press-outlet-badge {
+  flex-shrink: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 2px; margin-top: 2px;
+  min-width: 100px; text-align: center;
+}
+.badge-bloomberg { background: rgba(232,184,75,.12); border: 1px solid rgba(232,184,75,.3); color: var(--gold); }
+.badge-wsj       { background: rgba(232,184,75,.12); border: 1px solid rgba(232,184,75,.3); color: var(--gold); }
+.badge-lemonde   { background: rgba(0,229,204,.07); border: 1px solid rgba(0,229,204,.25); color: var(--teal); }
+.badge-lesechos  { background: rgba(0,229,204,.07); border: 1px solid rgba(0,229,204,.25); color: var(--teal); }
+.badge-conversation { background: rgba(0,229,204,.05); border: 1px solid rgba(0,229,204,.18); color: rgba(0,229,204,.7); }
+.badge-harvard   { background: rgba(232,184,75,.08); border: 1px solid rgba(232,184,75,.22); color: rgba(232,184,75,.75); }
+.badge-linkedin  { background: rgba(100,140,180,.08); border: 1px solid rgba(100,140,180,.22); color: rgba(150,190,230,.7); }
+.badge-voxeu     { background: rgba(100,140,180,.08); border: 1px solid rgba(100,140,180,.22); color: rgba(150,190,230,.7); }
+.badge-other     { background: rgba(100,120,140,.07); border: 1px solid rgba(100,120,140,.2); color: var(--muted); }
+
+.press-title {
+  flex: 1; font-size: 14px; line-height: 1.5; color: var(--white);
+  transition: color .18s;
+}
+.press-item:hover .press-title { color: rgba(221,229,240,.95); }
+.press-arr {
+  flex-shrink: 0; font-size: 16px; color: var(--teal);
+  opacity: 0; transform: translateX(-4px);
+  transition: opacity .18s, transform .18s; padding-top: 2px;
+}
+.press-item:hover .press-arr { opacity: 1; transform: translateX(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html">Alexandre <span>Garel</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Main</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="working-papers.html">Working Papers</a></li>
+    <li><a href="press-coverage.html" class="active">Press</a></li>
+    <li><a href="data.html">Data</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#" class="nav-btn">CV</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Media &amp; Public Discourse</div>
+    <h1 class="sec-title">Press Coverage</h1>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="outlet-legend">
+    <button class="outlet-tag on" data-outlet="all">All</button>
+    <button class="outlet-tag" data-outlet="bloomberg">Bloomberg</button>
+    <button class="outlet-tag" data-outlet="wsj">WSJ</button>
+    <button class="outlet-tag" data-outlet="lemonde">Le Monde</button>
+    <button class="outlet-tag" data-outlet="lesechos">Les Echos</button>
+    <button class="outlet-tag" data-outlet="conversation">The Conversation</button>
+    <button class="outlet-tag" data-outlet="harvard">Harvard Law</button>
+  </div>
+
+  <div class="press-list">
+
+    <a href="#" class="press-item" data-outlet="lesechos">
+      <div class="press-date">Nov 2024</div>
+      <div class="press-outlet-badge badge-lesechos">Les Echos</div>
+      <div class="press-title">Climat : les marchés anticipent le nouveau mandat Trump</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="linkedin">
+      <div class="press-date">Nov 2024</div>
+      <div class="press-outlet-badge badge-linkedin">LinkedIn</div>
+      <div class="press-title">Penser les risques de transition et physiques des entreprises liés à la biodiversité : l'après COP16</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="linkedin">
+      <div class="press-date">Oct 2024</div>
+      <div class="press-outlet-badge badge-linkedin">LinkedIn</div>
+      <div class="press-title">Employee demographic diversity and firm performance</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="harvard">
+      <div class="press-date">Aug 2024</div>
+      <div class="press-outlet-badge badge-harvard">Harvard Law</div>
+      <div class="press-title">Do Investors Care about Biodiversity?</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="conversation">
+      <div class="press-date">Jul 2024</div>
+      <div class="press-outlet-badge badge-conversation">Conversation</div>
+      <div class="press-title">Mon épargne contribue-t-elle à la restauration de la biodiversité ?</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="lemonde">
+      <div class="press-date">Jun 2024</div>
+      <div class="press-outlet-badge badge-lemonde">Le Monde</div>
+      <div class="press-title">L'apparition de régulations pour protéger la biodiversité expose les entreprises à des risques de transition</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="conversation">
+      <div class="press-date">May 2024</div>
+      <div class="press-outlet-badge badge-conversation">Conversation</div>
+      <div class="press-title">On fait le bilan… du bilan carbone</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="linkedin">
+      <div class="press-date">Nov 2023</div>
+      <div class="press-outlet-badge badge-linkedin">LinkedIn</div>
+      <div class="press-title">Changement du label ISR : vers une exclusion sans effets réels ?</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="lesechos">
+      <div class="press-date">Aug 2023</div>
+      <div class="press-outlet-badge badge-lesechos">Les Echos</div>
+      <div class="press-title">Comment la musique permet de deviner l'évolution des Bourses</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="lemonde">
+      <div class="press-date">Oct 2022</div>
+      <div class="press-outlet-badge badge-lemonde">Le Monde</div>
+      <div class="press-title">Les entreprises réduisent plus leurs émissions de CO₂ lorsque leurs dirigeants ont été exposés à des températures trop élevées</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="lesechos">
+      <div class="press-date">Sep 2022</div>
+      <div class="press-outlet-badge badge-lesechos">Les Echos</div>
+      <div class="press-title">Bourse : la dépression saisonnière fait de vous un investisseur plus responsable</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="bloomberg">
+      <div class="press-date">Sep 2022</div>
+      <div class="press-outlet-badge badge-bloomberg">Bloomberg</div>
+      <div class="press-title">Feeling Sad? You're More Likely to Put Money Into ESG Funds</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="conversation">
+      <div class="press-date">Feb 2022</div>
+      <div class="press-outlet-badge badge-conversation">Conversation</div>
+      <div class="press-title">Huit ans après, le bilan mitigé de la loi Florange</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="wsj">
+      <div class="press-date">Feb 2022</div>
+      <div class="press-outlet-badge badge-wsj">WSJ</div>
+      <div class="press-title">How the Olympics Could Affect the Stock Market?</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="conversation">
+      <div class="press-date">Aug 2021</div>
+      <div class="press-outlet-badge badge-conversation">Conversation</div>
+      <div class="press-title">Mood, music and money: what our Spotify playlists reveal about the emotional nature of financial markets</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="voxeu">
+      <div class="press-date">Jul 2020</div>
+      <div class="press-outlet-badge badge-voxeu">VoxEU</div>
+      <div class="press-title">Investors reward environmental responsibility in the COVID-19 crisis</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="conversation">
+      <div class="press-date">Jul 2020</div>
+      <div class="press-outlet-badge badge-conversation">Conversation</div>
+      <div class="press-title">Quel sens donner à la chute des cours de bourse pendant la crise du Covid-19 ?</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="other">
+      <div class="press-date">Nov 2019</div>
+      <div class="press-outlet-badge badge-other">Réalités Ind.</div>
+      <div class="press-title">Effets réels de la présence des investisseurs de long terme dans les entreprises cotées</div>
+      <div class="press-arr">→</div>
+    </a>
+
+    <a href="#" class="press-item" data-outlet="lesechos">
+      <div class="press-date">Feb 2019</div>
+      <div class="press-outlet-badge badge-lesechos">Les Echos</div>
+      <div class="press-title">Loi Florange : les droits de vote double découragent les grands fonds étrangers</div>
+      <div class="press-arr">→</div>
+    </a>
+
+  </div><!-- /press-list -->
+</div><!-- /page-wrap -->
+
+<script>
+const tags = document.querySelectorAll('.outlet-tag');
+const items = document.querySelectorAll('.press-item');
+tags.forEach(tag => {
+  tag.addEventListener('click', () => {
+    tags.forEach(t => t.classList.remove('on'));
+    tag.classList.add('on');
+    const f = tag.dataset.outlet;
+    items.forEach(item => {
+      item.style.display = (f === 'all' || item.dataset.outlet === f) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
+

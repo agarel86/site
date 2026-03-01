@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Working Papers — Alexandre Garel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.wp-grid { display: flex; flex-direction: column; gap: 18px; }
+
+.wp-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-bdr);
+  border-left: 3px solid var(--teal);
+  border-radius: 6px;
+  padding: 26px 30px;
+  transition: border-color .2s, background .2s;
+}
+.wp-card:hover {
+  border-color: rgba(0,229,204,.3);
+  border-left-color: var(--teal);
+  background: rgba(255,255,255,.045);
+}
+.wp-card.rr { border-left-color: var(--gold); }
+.wp-card.rr:hover { border-color: rgba(232,184,75,.3); border-left-color: var(--gold); }
+
+.wp-top {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 20px;
+  margin-bottom: 12px;
+}
+.wp-status-wrap { flex-shrink: 0; }
+.wp-status {
+  font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 3px; display: inline-block;
+  background: rgba(0,229,204,.1); border: 1px solid rgba(0,229,204,.3);
+  color: var(--teal);
+}
+.wp-status.rr {
+  background: rgba(232,184,75,.1); border-color: rgba(232,184,75,.35);
+  color: var(--gold);
+}
+
+.wp-citation {
+  font-size: 15px; line-height: 1.6;
+  color: var(--white); font-family: 'Inter', sans-serif;
+  margin-bottom: 14px;
+}
+.wp-citation strong { color: var(--white); }
+
+.wp-abstract {
+  font-size: 13.5px; line-height: 1.78;
+  color: rgba(221,229,240,.68);
+  margin-bottom: 14px;
+}
+.wp-footer {
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+.wp-topics { display: flex; gap: 6px; flex-wrap: wrap; }
+.wp-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11.5px; color: var(--teal);
+  text-decoration: none; opacity: .75;
+  transition: opacity .2s;
+}
+.wp-link:hover { opacity: 1; text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html">Alexandre <span>Garel</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Main</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="working-papers.html" class="active">Working Papers</a></li>
+    <li><a href="press-coverage.html">Press</a></li>
+    <li><a href="data.html">Data</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#" class="nav-btn">CV</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Research in Progress</div>
+    <h1 class="sec-title">Working Papers</h1>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="wp-grid">
+
+    <div class="wp-card rr">
+      <div class="wp-top">
+        <div class="wp-citation">
+          Garel, A., Michaely, R., and Romec, A. <strong>Climate Disclosure and Director Elections.</strong>
+        </div>
+        <div class="wp-status-wrap">
+          <span class="wp-status rr">R&amp;R · Management Science</span>
+        </div>
+      </div>
+      <div class="wp-abstract">
+        Firms not disclosing carbon emissions receive significantly lower support for their directors in board elections. Firms initiating climate disclosure see increased director support. Sustainable funds and universal investors are key drivers of this trend.
+      </div>
+      <div class="wp-footer">
+        <div class="wp-topics">
+          <span class="chip">Climate Disclosure</span>
+          <span class="chip">Director Elections</span>
+          <span class="chip">ESG</span>
+        </div>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5085984" target="_blank" class="wp-link">↗ SSRN</a>
+      </div>
+    </div>
+
+    <div class="wp-card rr">
+      <div class="wp-top">
+        <div class="wp-citation">
+          Di Giuli, A., Garel, A., and Romec, A. <strong>The Voting Behavior of Women-Led Mutual Funds.</strong> ECGI Working Paper.
+        </div>
+        <div class="wp-status-wrap">
+          <span class="wp-status rr">R&amp;R · Journal of Corporate Finance</span>
+        </div>
+      </div>
+      <div class="wp-abstract">
+        Women-led mutual funds are more likely to support environmental and social (ES) proposals, but not governance ones. Women-led mutual funds are also more likely to vote with management in firms headed by female CEOs.
+      </div>
+      <div class="wp-footer">
+        <div class="wp-topics">
+          <span class="chip">Gender</span>
+          <span class="chip">Mutual Funds</span>
+          <span class="chip">Voting</span>
+          <span class="chip">ESG</span>
+        </div>
+        <a href="https://ssrn.com/abstract=42147622" target="_blank" class="wp-link">↗ SSRN</a>
+      </div>
+    </div>
+
+    <div class="wp-card rr">
+      <div class="wp-top">
+        <div class="wp-citation">
+          Bourveau, T., Garel, A., and Romec, A. <strong>Mandatory Carbon Disclosure: Evidence from France.</strong>
+        </div>
+        <div class="wp-status-wrap">
+          <span class="wp-status rr">R&amp;R · European Accounting Review</span>
+        </div>
+      </div>
+      <div class="wp-abstract">
+        We examine firms' response to a carbon disclosure mandate imposed on French firms with more than 500 employees by the Grenelle II law. Only half of the firms subject to the mandate comply and file at least one carbon report between 2014 and 2021.
+      </div>
+      <div class="wp-footer">
+        <div class="wp-topics">
+          <span class="chip">Carbon Disclosure</span>
+          <span class="chip">Climate Policy</span>
+          <span class="chip">France</span>
+        </div>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4779950" target="_blank" class="wp-link">↗ SSRN</a>
+      </div>
+    </div>
+
+    <div class="wp-card">
+      <div class="wp-top">
+        <div class="wp-citation">
+          Derrien, F., Garel, A., Romec, A., and Zhou, F. <strong>Climate Risk Engagements.</strong>
+        </div>
+        <div class="wp-status-wrap">
+          <span class="wp-status">Working Paper</span>
+        </div>
+      </div>
+      <div class="wp-abstract">
+        Climate risk engagements represent a growing fraction of ESG engagements by large institutional investors and are more frequent in high carbon emissions industries. Following engagement, targeted firms are more likely to commit to science-based climate targets and to disclose climate-related information.
+      </div>
+      <div class="wp-footer">
+        <div class="wp-topics">
+          <span class="chip">Climate Risk</span>
+          <span class="chip">Engagement</span>
+          <span class="chip">ESG</span>
+        </div>
+        <a href="https://papers.ssrn.com/abstract=5051906" target="_blank" class="wp-link">↗ SSRN</a>
+      </div>
+    </div>
+
+    <div class="wp-card">
+      <div class="wp-top">
+        <div class="wp-citation">
+          De Bock, K., &amp; Garel, A. <strong>From Vision to Prediction: A Multimodal-AI Pipeline to Generate Perceptual Attributes for Price Prediction.</strong>
+        </div>
+        <div class="wp-status-wrap">
+          <span class="wp-status">Working Paper</span>
+        </div>
+      </div>
+      <div class="wp-abstract">
+        We develop a multimodal AI pipeline that combines computer vision and language models to generate perceptual attributes from images and text, and use them to predict prices. The approach demonstrates that AI-generated perceptual features contain economically meaningful information beyond traditional quantitative variables.
+      </div>
+      <div class="wp-footer">
+        <div class="wp-topics">
+          <span class="chip">Artificial Intelligence</span>
+          <span class="chip">Machine Learning</span>
+          <span class="chip">Computer Vision</span>
+          <span class="chip">Price Prediction</span>
+        </div>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5987534" target="_blank" class="wp-link">↗ SSRN</a>
+      </div>
+    </div>
+
+    <div class="wp-card">
+      <div class="wp-top">
+        <div class="wp-citation">
+          Garel, A., Cheng, E. <strong>Minimum Energy Performance Standards and Housing Price Capitalization: Evidence from France's Rental Ban on 'Energy Sieves'.</strong>
+        </div>
+        <div class="wp-status-wrap">
+          <span class="wp-status">Working Paper</span>
+        </div>
+      </div>
+      <div class="wp-abstract">
+        Using more than one million housing transactions over 2014–2024, we document that energy sieves — the least energy-efficient houses subject to France's 2021 progressive rental ban — sell at an additional discount of about 9 percentage points following the policy announcement.
+      </div>
+      <div class="wp-footer">
+        <div class="wp-topics">
+          <span class="chip">Energy Performance</span>
+          <span class="chip">Housing Prices</span>
+          <span class="chip">Climate Policy</span>
+        </div>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5815923" target="_blank" class="wp-link">↗ SSRN</a>
+      </div>
+    </div>
+
+  </div><!-- /wp-grid -->
+</div><!-- /page-wrap -->
+
+</body>
+</html>
+
